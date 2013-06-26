@@ -1,0 +1,17 @@
+* what is ssl
+* how cryptography works
+* how digital signatures ensure message has not been tampered
+* where exactly encryption happens
+* can a tampered encrypted message be decrypted
+* how ssl can be implemented using java
+* what pieces of ssl mechanism/handshake can or should java handle for me and what as a user i need to provide/do
+* what is KEY? why are we keeping map from keys to ssl engines? if there are multiple ssl engines, do they share the same client mode? why do we have multiple ssl engines?
+* what do we store in remaining data
+* why do we need to loop inside unwrap(as per docs single invocation should be sufficient)
+* even after unwrapping all data, we make a call to store unprocessed data. why?
+* what should ssl manager do or is supposed to do?
+* why do we need to maintain handshake completed status when we can get this info from the ssl engine?
+* after unwrapping data, we again check if the status of handshake is need_unwrap and if yes we exit shakehands method. why?
+* how does a byte buffer work
+* how does a buffer work w.r.t. limit, position, capacity
+* what are the exact semantics of need_wrap? does it mean data must be sent to remote side or just that sslengine.wrap() should be called? (docs are not very clear here)
